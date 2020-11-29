@@ -1,6 +1,8 @@
-package app.service;
+package app.model;
 
+import java.io.Serializable;
 import java.util.Objects;
+import java.util.UUID;
 
 public class Account {
     private Long id;
@@ -19,6 +21,8 @@ public class Account {
 
     public Account(Currency currency,  Customer customer ) {
         this.currency = currency;
+        this.balance = 0d;
+        this.number = UUID.randomUUID().toString();;
         this.customer = customer;
     }
 

@@ -1,5 +1,7 @@
-package app.service;
+package app.model;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,13 +17,13 @@ public class Customer {
         this.name = name;
         this.email = email;
         this.age = age;
-        this.accounts = accounts;
+        this.accounts = new ArrayList<>();
     }
 
     public Customer(String name, String email, Integer age) {
         this.name = name;
         this.email = email;
-        this.age = age;
+        this.accounts = new ArrayList<>();
     }
 
     public Long getId() {
@@ -91,4 +93,8 @@ public class Customer {
                 ", accounts=" + accounts +
                 '}';
     }
+    public void addAccount(Account account) {
+        this.accounts.add(account);
+    }
+
 }

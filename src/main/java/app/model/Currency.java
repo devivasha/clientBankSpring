@@ -1,4 +1,4 @@
-package app.service;
+package app.model;
 
 public enum Currency {
     USD,
